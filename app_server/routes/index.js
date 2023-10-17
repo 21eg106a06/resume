@@ -1,0 +1,13 @@
+var express = require('express');
+var router = express.Router();
+var ctrlLocations = require('../controller/locations');
+var ctrlOthers = require('../controller/others');
+router.get('/',ctrlLocations.homelist);
+router.get('/location',ctrlLocations.LocationInfo);
+router.get('/location2',ctrlLocations.LocationInfo2);
+router.get('/location3',ctrlLocations.LocationInfo3);
+router.get('/location/review/new',ctrlLocations.addReview);
+router.get('/location/review2/new',ctrlLocations.addReview2);
+router.get('/location/review3/new',ctrlLocations.addReview3);
+router.get('/about',ctrlOthers.about);
+module.exports = router;
